@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="ddf820465c5f4160b332f29b8e45eff6" Name="Diagram1">
+        <EntityTypeShape EntityType="BookStoreModel.Auth" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BookStoreModel.Cart" Width="1.5" PointX="5.25" PointY="6.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="BookStoreModel.Payment" Width="1.5" PointX="5.25" PointY="2.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BookStoreModel.ProductInventory" Width="1.5" PointX="5.25" PointY="8.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="BookStoreModel.Product" Width="1.5" PointX="3" PointY="6.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="BookStoreModel.Registration" Width="1.5" PointX="0.75" PointY="3.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BookStoreModel.Sold_Items" Width="1.5" PointX="7.5" PointY="2.75" IsExpanded="true" />
+        <AssociationConnector Association="BookStoreModel.FK_Cart_Products" ManuallyRouted="false" />
+        <AssociationConnector Association="BookStoreModel.FK_Payment_Payment" ManuallyRouted="false" />
+        <AssociationConnector Association="BookStoreModel.FK_Payment_Registration" ManuallyRouted="false" />
+        <AssociationConnector Association="BookStoreModel.FK_Sold_Items_Payment" ManuallyRouted="false" />
+        <AssociationConnector Association="BookStoreModel.FK_ProductInventory_Products" ManuallyRouted="false" />
+        <AssociationConnector Association="BookStoreModel.FK_Products_Registration" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
