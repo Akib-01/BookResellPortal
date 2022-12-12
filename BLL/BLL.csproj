@@ -49,6 +49,9 @@
     <Compile Include="DTOs\ProductDTO.cs" />
     <Compile Include="DTOs\RegistrationDTO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\CartServices.cs" />
+    <Compile Include="Services\ProductService.cs" />
+    <Compile Include="Services\RegistrationService.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DAL\DAL.csproj">
@@ -56,9 +59,7 @@
       <Name>DAL</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Services\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
