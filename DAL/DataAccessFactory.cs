@@ -16,5 +16,8 @@ namespace DAL
         public static IRepo<Cart, int, Cart> CartDataAccess() { return new CartRepo(); }
         public static IRepo<Admin, int, Admin> AdminDataAccess() { return new AdminRepo(); }
         public static IRepo<TrackOrder, int, TrackOrder> TrackOrderDataAccess() { return new TrackOrderRepo(); }
+        public static IRepo<Payment, int, Payment> PaymentDataAccess() { return new PaymentRepo(); }
+        public static IRepo<Sold_Items, int, Sold_Items> SoldItemDataAccess() { return new SoldItemRepo(); }
+        public static IRepo<ProductInventory, int, ProductInventory> ProductInventoryDataAccess() { return new ProductInventoryRepo(); }
     }
 }

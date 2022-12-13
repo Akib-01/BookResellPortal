@@ -95,9 +95,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repos\AdminRepo.cs" />
     <Compile Include="Repos\CartRepo.cs" />
+    <Compile Include="Repos\PaymentRepo.cs" />
+    <Compile Include="Repos\ProductInventoryRepo.cs" />
     <Compile Include="Repos\ProductRepo.cs" />
     <Compile Include="Repos\RegistrationRepo.cs" />
     <Compile Include="Repos\Repo.cs" />
+    <Compile Include="Repos\SoldItemRepo.cs" />
     <Compile Include="Repos\TrackOrderRepo.cs" />
   </ItemGroup>
   <ItemGroup>

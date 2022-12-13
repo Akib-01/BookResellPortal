@@ -46,14 +46,20 @@
   <ItemGroup>
     <Compile Include="DTOs\AdminDTO.cs" />
     <Compile Include="DTOs\CartDTO.cs" />
+    <Compile Include="DTOs\PaymentDTO.cs" />
     <Compile Include="DTOs\ProductDTO.cs" />
+    <Compile Include="DTOs\ProductInventoryDTO.cs" />
     <Compile Include="DTOs\RegistrationDTO.cs" />
+    <Compile Include="DTOs\SoldItemDTO.cs" />
     <Compile Include="DTOs\TrackOrderDTO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\AdminService.cs" />
     <Compile Include="Services\CartServices.cs" />
+    <Compile Include="Services\PaymentServices.cs" />
+    <Compile Include="Services\ProductInventoryServices.cs" />
     <Compile Include="Services\ProductService.cs" />
     <Compile Include="Services\RegistrationService.cs" />
+    <Compile Include="Services\SoldItemServices.cs" />
     <Compile Include="Services\TrackOrderServices.cs" />
   </ItemGroup>
   <ItemGroup>
