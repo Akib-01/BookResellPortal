@@ -9,14 +9,14 @@ using System.Web.Http;
 
 namespace UsedBookStore.Controllers
 {
-    public class AdminController : ApiController
+    public class TrackOrderController : ApiController
     {
-        [Route("api/admins")]
+        [Route("api/trackOrders")]
         public HttpResponseMessage Get()
         {
             try
             {
-                var data = AdminService.Get();
+                var data = TrackOrderServices.Get();
                 return Request.CreateResponse(HttpStatusCode.OK, data);
             }
             catch (Exception ex)
@@ -25,37 +25,33 @@ namespace UsedBookStore.Controllers
             }
 
         }
-
         [HttpGet]
-        [Route("api/admins/{id}")]
+        [Route("api/trackOrders/{id}")]
         public HttpResponseMessage Get(int id)
         {
-            var data = AdminService.Get(id);
+            var data = TrackOrderServices.Get(id);
             return Request.CreateResponse(HttpStatusCode.OK, data);
         }
-
-        [Route("api/admins/add")]
+        [Route("api/trackOrders/add")]
         [HttpPost]
-        public HttpResponseMessage Add(AdminDTO obj)
+        public HttpResponseMessage Add(TrackOrderDTO obj)
         {
-            var data = AdminService.Add(obj);
-            return Request.CreateResponse(HttpStatusCode.OK, data);
-
-        }
-
-        /*[Route("api/admins/update")]
-        public HttpResponseMessage Update(AdminDTO obj)
-        {
-            var data = AdminService.Update(obj);
+            var data = TrackOrderServices.Add(obj);
             return Request.CreateResponse(HttpStatusCode.OK, data);
         }
-        */
-        [Route("api/admins/delete")]
+
+        [Route("api/trackOrders/update")]
+        public HttpResponseMessage Update(TrackOrderDTO obj)
+        {
+            var data = TrackOrderServices.Update(obj);
+            return Request.CreateResponse(HttpStatusCode.OK, data);
+        }
+
+        [Route("api/trackOrders/delete")]
         public HttpResponseMessage Delete(int id)
         {
-            var data = AdminService.Delete(id);
+            var data = TrackOrderServices.Delete(id);
             return Request.CreateResponse(HttpStatusCode.OK, data);
         }
     }
 }
-

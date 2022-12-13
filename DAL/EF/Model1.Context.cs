@@ -25,6 +25,7 @@ namespace DAL.EF
             throw new UnintentionalCodeFirstException();
         }
     
+        public DbSet<Admin> Admins { get; set; }
         public DbSet<Auth> Auths { get; set; }
         public DbSet<Cart> Carts { get; set; }
         public DbSet<Payment> Payments { get; set; }
@@ -32,7 +33,6 @@ namespace DAL.EF
         public DbSet<Product> Products { get; set; }
         public DbSet<Registration> Registrations { get; set; }
         public DbSet<Sold_Items> Sold_Items { get; set; }
-        public DbSet<Admin> Admins { get; set; }
         public DbSet<TrackOrder> TrackOrders { get; set; }
     }
 }

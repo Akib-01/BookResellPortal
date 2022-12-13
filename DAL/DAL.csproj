@@ -98,6 +98,7 @@
     <Compile Include="Repos\ProductRepo.cs" />
     <Compile Include="Repos\RegistrationRepo.cs" />
     <Compile Include="Repos\Repo.cs" />
+    <Compile Include="Repos\TrackOrderRepo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.Config" />
@@ -113,7 +114,6 @@
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
     <Content Include="EF\Model1.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>

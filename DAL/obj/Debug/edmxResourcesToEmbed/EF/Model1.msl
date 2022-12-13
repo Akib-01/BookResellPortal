@@ -1,6 +1,21 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
   <EntityContainerMapping StorageEntityContainer="BookStoreModelStoreContainer" CdmEntityContainer="BookStoreEntities">
+    <EntitySetMapping Name="Admins">
+      <EntityTypeMapping TypeName="BookStoreModel.Admin">
+        <MappingFragment StoreEntitySet="Admin">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="uname" ColumnName="uname" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="phone" ColumnName="phone" />
+          <ScalarProperty Name="gender" ColumnName="gender" />
+          <ScalarProperty Name="type" ColumnName="type" />
+          <ScalarProperty Name="DOB" ColumnName="DOB" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="confirm_password" ColumnName="confirm_password" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <EntitySetMapping Name="Auths">
       <EntityTypeMapping TypeName="BookStoreModel.Auth">
         <MappingFragment StoreEntitySet="Auth">
@@ -74,18 +89,14 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="Admins">
-      <EntityTypeMapping TypeName="BookStoreModel.Admin">
-        <MappingFragment StoreEntitySet="Admin">
-          <ScalarProperty Name="confirm_password" ColumnName="confirm_password" />
-          <ScalarProperty Name="password" ColumnName="password" />
-          <ScalarProperty Name="DOB" ColumnName="DOB" />
-          <ScalarProperty Name="type" ColumnName="type" />
-          <ScalarProperty Name="gender" ColumnName="gender" />
-          <ScalarProperty Name="phone" ColumnName="phone" />
-          <ScalarProperty Name="email" ColumnName="email" />
-          <ScalarProperty Name="uname" ColumnName="uname" />
+    <EntitySetMapping Name="TrackOrders">
+      <EntityTypeMapping TypeName="BookStoreModel.TrackOrder">
+        <MappingFragment StoreEntitySet="TrackOrder">
           <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+          <ScalarProperty Name="OrderDate" ColumnName="OrderDate" />
+          <ScalarProperty Name="ArrivalDate" ColumnName="ArrivalDate" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

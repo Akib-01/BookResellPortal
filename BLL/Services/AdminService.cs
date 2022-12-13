@@ -28,7 +28,6 @@ namespace BLL.Services
             var data = DataAccessFactory.AdminDataAccess().Get(id);
             var cfg = new MapperConfiguration(c => {
                 c.CreateMap<Admin, AdminDTO>();
-
             });
             var mapper = new Mapper(cfg);
             return mapper.Map<AdminDTO>(data);
@@ -47,6 +46,26 @@ namespace BLL.Services
             return null;
         }
 
+        /*static Admin Update(AdminDTO div)
+        {
+            var cfg = new MapperConfiguration(c => {
+                c.CreateMap<AdminDTO, Admin>();
+                c.CreateMap<Admin, AdminDTO>();
+            });
+            var mapper = new Mapper(cfg);
+            var ht = mapper.Map<Admin>(div);
+            var data = DataAccessFactory.AdminDataAccess().Update(ht);
+
+            if (data != null) return mapper.Map<AdminDTO>(data);
+            return null;
+        }
+        */
+        public static bool Delete(int id)
+        {
+            var data = DataAccessFactory.AdminDataAccess().Delete(id);
+            if (data != false) return true;
+            return false;
+        }
 
     }
 }

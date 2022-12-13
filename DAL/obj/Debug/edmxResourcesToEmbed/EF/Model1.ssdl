@@ -80,6 +80,16 @@
     <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="PaymentId" Type="int" Nullable="false" />
   </EntityType>
+  <EntityType Name="TrackOrder">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="ProductId" Type="int" Nullable="false" />
+    <Property Name="OrderDate" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="ArrivalDate" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Status" Type="varchar" MaxLength="50" />
+  </EntityType>
   <Association Name="FK_Cart_Products">
     <End Role="Products" Type="Self.Products" Multiplicity="1" />
     <End Role="Cart" Type="Self.Cart" Multiplicity="*" />
@@ -152,6 +162,18 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="FK_TrackOrder_Products">
+    <End Role="Products" Type="Self.Products" Multiplicity="1" />
+    <End Role="TrackOrder" Type="Self.TrackOrder" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Products">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="TrackOrder">
+        <PropertyRef Name="ProductId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <EntityContainer Name="BookStoreModelStoreContainer">
     <EntitySet Name="Admin" EntityType="Self.Admin" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Auth" EntityType="Self.Auth" Schema="dbo" store:Type="Tables" />
@@ -161,6 +183,7 @@
     <EntitySet Name="Products" EntityType="Self.Products" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Registration" EntityType="Self.Registration" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Sold_Items" EntityType="Self.Sold_Items" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TrackOrder" EntityType="Self.TrackOrder" Schema="dbo" store:Type="Tables" />
     <AssociationSet Name="FK_Cart_Products" Association="Self.FK_Cart_Products">
       <End Role="Products" EntitySet="Products" />
       <End Role="Cart" EntitySet="Cart" />
@@ -184,6 +207,10 @@
     <AssociationSet Name="FK_Sold_Items_Payment" Association="Self.FK_Sold_Items_Payment">
       <End Role="Payment" EntitySet="Payment" />
       <End Role="Sold_Items" EntitySet="Sold_Items" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TrackOrder_Products" Association="Self.FK_TrackOrder_Products">
+      <End Role="Products" EntitySet="Products" />
+      <End Role="TrackOrder" EntitySet="TrackOrder" />
     </AssociationSet>
   </EntityContainer>
 </Schema>
