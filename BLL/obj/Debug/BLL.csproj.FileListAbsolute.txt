@@ -12,3 +12,17 @@ C:\Users\ASUS\source\repos\UsedBookStore\BLL\obj\Debug\BLL.csproj.CoreCompileInp
 C:\Users\ASUS\source\repos\UsedBookStore\BLL\obj\Debug\BLL.csproj.CopyComplete
 C:\Users\ASUS\source\repos\UsedBookStore\BLL\obj\Debug\BLL.dll
 C:\Users\ASUS\source\repos\UsedBookStore\BLL\obj\Debug\BLL.pdb
+D:\Project Code\BLL\bin\Debug\BLL.dll
+D:\Project Code\BLL\bin\Debug\BLL.pdb
+D:\Project Code\BLL\bin\Debug\AutoMapper.dll
+D:\Project Code\BLL\bin\Debug\DAL.dll
+D:\Project Code\BLL\bin\Debug\EntityFramework.dll
+D:\Project Code\BLL\bin\Debug\DAL.pdb
+D:\Project Code\BLL\bin\Debug\DAL.dll.config
+D:\Project Code\BLL\bin\Debug\AutoMapper.xml
+D:\Project Code\BLL\bin\Debug\EntityFramework.xml
+D:\Project Code\BLL\obj\Debug\BLL.csproj.AssemblyReference.cache
+D:\Project Code\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
+D:\Project Code\BLL\obj\Debug\BLL.csproj.CopyComplete
+D:\Project Code\BLL\obj\Debug\BLL.dll
+D:\Project Code\BLL\obj\Debug\BLL.pdb

@@ -8,37 +8,37 @@ using System.Threading.Tasks;
 
 namespace DAL.Repos
 {
-    public class RegistrationRepo : Repo, IRepo<Registration, int, Registration>
+    public class AdminRepo : Repo, IRepo<Admin, int, Admin>
     {
-        public Registration Add(Registration obj)
+        public Admin Add(Admin obj)
         {
-            db.Registrations.Add(obj);
+            db.Admins.Add(obj);
             if (db.SaveChanges() > 0) return obj;
             return null;
         }
 
         public bool Delete(int id)
         {
-            var dbobj=Get(id);
-            db.Registrations.Remove(dbobj);
+            var dbobj = Get(id);
+            db.Admins.Remove(dbobj);
             return db.SaveChanges() > 0;
         }
 
-        public List<Registration> Get()
+        public List<Admin> Get()
         {
-            return db.Registrations.ToList();
+            return db.Admins.ToList();
         }
 
-        public Registration Get(int id)
+        public Admin Get(int id)
         {
-            return db.Registrations.Find(id);
+            return db.Admins.Find(id);
         }
 
-        public Registration Update(Registration obj)
+        public Admin Update(Admin obj)
         {
             var dbobj = Get(obj.Id);
             db.Entry(dbobj).CurrentValues.SetValues(obj);
-            if(db.SaveChanges() > 0) return obj;
+            if (db.SaveChanges() > 0) return obj;
             return null;
         }
     }

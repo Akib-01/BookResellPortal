@@ -19,6 +19,7 @@ namespace DAL.EF
             this.Carts = new HashSet<Cart>();
             this.Payments = new HashSet<Payment>();
             this.ProductInventories = new HashSet<ProductInventory>();
+            this.TrackOrders = new HashSet<TrackOrder>();
         }
     
         public int Id { get; set; }
@@ -33,5 +34,6 @@ namespace DAL.EF
         public virtual ICollection<Payment> Payments { get; set; }
         public virtual ICollection<ProductInventory> ProductInventories { get; set; }
         public virtual Registration Registration { get; set; }
+        public virtual ICollection<TrackOrder> TrackOrders { get; set; }
     }
 }
