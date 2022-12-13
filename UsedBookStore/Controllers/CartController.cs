@@ -39,7 +39,6 @@ namespace UsedBookStore.Controllers
             var data = CartServices.Add(obj);
             return Request.CreateResponse(HttpStatusCode.OK, data);
 
-        }
-    
+        }    
 }
 }
